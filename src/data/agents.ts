@@ -1,0 +1,140 @@
+export interface AcademicAgent {
+  id: string;
+  name: string;
+  role: string;
+  category: "planning" | "assessment" | "core" | "support";
+  stage: "Stage 1 Active" | "Stage 1 In Progress" | "Stage 2 Planned";
+  description: string;
+  inputs: string[];
+  outputs: string[];
+  deterministicAuditChecks: string[];
+  icon: string;
+  highlighted?: boolean;
+}
+
+export const ACADEMIC_AGENTS: AcademicAgent[] = [
+  {
+    id: "unit-planner",
+    name: "Unit Planner Agent",
+    role: "Cross-Topic Curriculum Synthesis",
+    category: "planning",
+    stage: "Stage 1 Active",
+    description: "Structures 4–8 week DP inquiry units mapped to IB syllabus statements, conceptual understandings, ATL skills, and TOK connections.",
+    inputs: ["Subject Guide", "Hours Allocation", "Conceptual Lens", "ATL Focus"],
+    outputs: ["Inquiry Statements", "Summative Rubrics", "Weekly Progression", "TOK Touchpoints"],
+    deterministicAuditChecks: ["Syllabus statement coverage", "Hour budget arithmetic", "ATL skill taxonomy"],
+    icon: "CalendarRange",
+    highlighted: true,
+  },
+  {
+    id: "lesson-planner",
+    name: "Lesson Planner Agent",
+    role: "Paced Activity & Scaffolding Architect",
+    category: "planning",
+    stage: "Stage 1 Active",
+    description: "Builds minute-by-minute lesson progressions with differentiated tiers (Standard, EAL, SEN, Extension) and formative check-ins.",
+    inputs: ["Topic Code", "Duration (e.g. 90 min)", "Lab/Theory Mode", "Student Needs"],
+    outputs: ["Minute-by-minute Pacing", "Teacher Script & Prompts", "Differentiated Worksheets", "Exit Tickets"],
+    deterministicAuditChecks: ["Timing arithmetic strictly equals total lesson duration", "Command-term alignment"],
+    icon: "Clock",
+    highlighted: true,
+  },
+  {
+    id: "assessment-generator",
+    name: "Assessment Generator Agent",
+    role: "Criterion-Referenced Exam Builder",
+    category: "assessment",
+    stage: "Stage 1 Active",
+    description: "Produces Paper 1, 2, or 3 practice assessments with authoritative IB command terms, mark allocations, and granular markschemes.",
+    inputs: ["Syllabus Subsection", "Paper Style (SL/HL)", "Target Marks", "Assessment Objectives"],
+    outputs: ["Exam-Ready Question Paper", "Full Markscheme", "Alternative Acceptable Responses", "Examiner Notes"],
+    deterministicAuditChecks: ["Total marks match sum of sub-questions", "Command term verification (Explain vs Discuss)"],
+    icon: "FileCheck2",
+    highlighted: true,
+  },
+  {
+    id: "question-bank",
+    name: "Question Bank Agent",
+    role: "Dynamic Item Generation & Tagging",
+    category: "assessment",
+    stage: "Stage 1 Active",
+    description: "Creates categorized pools of multiple-choice, data-response, and extended-response items tagged by difficulty, syllabus code, and cognitive demand.",
+    inputs: ["Target Subtopics", "Cognitive Level (AO1–AO3)", "Item Count"],
+    outputs: ["Distractor Rationale", "Annotated Worked Solutions", "Syllabus Tagged Item Bank"],
+    deterministicAuditChecks: ["MCQ single-key uniqueness", "Syllabus code validity"],
+    icon: "Database",
+  },
+  {
+    id: "ia-assistant",
+    name: "IA Assistant Agent",
+    role: "Internal Assessment Scaffolding & Moderation",
+    category: "core",
+    stage: "Stage 1 Active",
+    description: "Guides teachers and students through research question formulation, methodology ethical checks, and criterion-by-criterion formative feedback.",
+    inputs: ["Draft Research Question", "Subject Criterion (A–E)", "Draft Methodology"],
+    outputs: ["Formative Rubric Scoring", "Ethical & Safety Checklist", "Moderator-Style Annotations"],
+    deterministicAuditChecks: ["Mandatory criterion rubric coverage", "Zero direct ghostwriting invariant"],
+    icon: "GraduationCap",
+    highlighted: true,
+  },
+  {
+    id: "tok-guide",
+    name: "TOK Guide Agent",
+    role: "Theory of Knowledge Interleaving",
+    category: "core",
+    stage: "Stage 1 Active",
+    description: "Integrates Knowledge Questions, Areas of Knowledge (AOK), and Ways of Knowing directly into subject units and exhibition planning.",
+    inputs: ["DP Subject Unit", "Selected AOK (Natural Sciences, History, etc.)", "Theme"],
+    outputs: ["Authentic Knowledge Questions", "Exhibition Prompt Prompts", "Essay Formative Feedback Prompts"],
+    deterministicAuditChecks: ["Official 35 Knowledge Exhibition prompt verification"],
+    icon: "Sparkles",
+  },
+  {
+    id: "ee-guide",
+    name: "EE Guide Agent",
+    role: "Extended Essay Process & Milestone Tracker",
+    category: "core",
+    stage: "Stage 1 Active",
+    description: "Scaffolds the 40-hour independent research journey, guiding reflection sessions (RPPF), source evaluation, and academic honesty checks.",
+    inputs: ["Subject Domain", "Working Title", "Supervision Milestone"],
+    outputs: ["RPPF Guided Questions", "Source Evaluation Rubrics", "Formal Presentation Outlines"],
+    deterministicAuditChecks: ["Word count range validation", "RPPF session protocol adherence"],
+    icon: "BookOpen",
+  },
+  {
+    id: "teaching-assistant",
+    name: "Teaching Assistant Agent",
+    role: "On-the-Fly Classroom Support",
+    category: "support",
+    stage: "Stage 1 Active",
+    description: "Generates quick analogies, real-world case studies, student misunderstanding diagnostics, and lab safety briefings instantly during active teaching.",
+    inputs: ["Immediate Student Misconception", "Subject", "Context"],
+    outputs: ["Pedagogical Analogy", "Quick Socratic Question Ladder", "Concept Diagnostic Card"],
+    deterministicAuditChecks: ["Zero hallucination of safety hazards"],
+    icon: "Bot",
+  },
+  {
+    id: "resource-library",
+    name: "Resource Library Agent",
+    role: "Context Scoping & Artifact Memory",
+    category: "support",
+    stage: "Stage 1 Active",
+    description: "Indexes teacher uploads, past semester unit plans, school lab inventory, and department guidelines into scoped, searchable memory.",
+    inputs: ["Uploaded PDFs / PPTs / Word Docs", "Teacher Tags"],
+    outputs: ["Vectorized Context Chunks", "Cross-Referenced Course Pack", "Reusable Snippets"],
+    deterministicAuditChecks: ["Pydantic payload schema validation", "Deduplication check"],
+    icon: "FolderSearch",
+  },
+  {
+    id: "evaluation-engine",
+    name: "Evaluation Engine Agent",
+    role: "Audit Telemetry & Quality Gates",
+    category: "assessment",
+    stage: "Stage 2 Planned",
+    description: "Runs post-generation multi-pass evaluation inspecting conceptual rigor, pedagogical balance, and student accessibility before publishing.",
+    inputs: ["Candidate Artifact", "Target Audit Checklist"],
+    outputs: ["Pedagogical Audit Report", "Coverage Scorecard", "Correction Recommendations"],
+    deterministicAuditChecks: ["Process-level pass/fail gate"],
+    icon: "CheckCircle2",
+  }
+];
