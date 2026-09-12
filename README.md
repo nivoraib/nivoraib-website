@@ -101,6 +101,8 @@ Website/
 ### Installation
 Clone the repository and install dependencies:
 ```bash
+git clone https://github.com/nivoraib/nivoraib-website.git
+cd nivoraib-website
 npm install
 ```
 
