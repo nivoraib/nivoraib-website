@@ -86,8 +86,7 @@ export default function RootLayout({
             __html: `
               try {
                 var saved = localStorage.getItem('nivoraib-theme');
-                var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                if (saved === 'dark' || (!saved && prefersDark)) {
+                if (saved === 'dark') {
                   document.documentElement.classList.add('dark');
                 } else {
                   document.documentElement.classList.remove('dark');
@@ -97,7 +96,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="flex flex-col min-h-full bg-white dark:bg-navy-950 text-navy-900 dark:text-slate-100 selection:bg-brand-soft/40 selection:text-navy-950 font-sans">
+      <body className="flex flex-col min-h-full bg-white dark:bg-zinc-950 text-navy-900 dark:text-zinc-100 selection:bg-brand-soft/40 selection:text-navy-950 font-sans">
         <ThemeProvider>
           <ComingSoonProvider>
             <Navbar />

@@ -21,7 +21,7 @@ export default function RoadmapPage() {
           subtitle="A transparent breakdown of what is built today in Stage 1, what is in active architectural development for Stage 2, and what we are exploring for the future."
         />
 
-        <div className="max-w-3xl mx-auto p-4 rounded-xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-navy-750 text-xs text-slate-600 dark:text-slate-300 flex items-center justify-between gap-4">
+        <div className="max-w-3xl mx-auto p-4 rounded-xl bg-slate-50 dark:bg-zinc-850 border border-slate-200 dark:border-zinc-700 text-xs text-slate-600 dark:text-zinc-300 flex items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
             <span>
@@ -30,7 +30,7 @@ export default function RoadmapPage() {
           </div>
           <button
             onClick={() => openComingSoon("Roadmap Status")}
-            className="shrink-0 text-brand-indigo dark:text-brand-lavender font-bold hover:underline cursor-pointer text-xs"
+            className="shrink-0 text-brand-indigo dark:text-zinc-200 font-bold hover:underline cursor-pointer text-xs"
           >
             Pilot Cohort Status →
           </button>
@@ -42,35 +42,35 @@ export default function RoadmapPage() {
         {ROADMAP_DATA.map((stage, idx) => (
           <div
             key={stage.stageNumber}
-            className="bg-white dark:bg-navy-900 rounded-2xl border border-slate-200/90 dark:border-navy-750 p-6 sm:p-8 lg:p-10 shadow-subtle hover:shadow-card transition-all space-y-6 relative overflow-hidden"
+            className="bg-white dark:bg-zinc-850 rounded-2xl border border-slate-200/90 dark:border-zinc-700 p-6 sm:p-8 lg:p-10 shadow-subtle hover:shadow-card transition-all space-y-6 relative overflow-hidden"
           >
             {/* Top Phase Header */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 dark:border-navy-800 pb-5">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 dark:border-zinc-800 pb-5">
               <div className="space-y-1">
                 <div className="flex items-center gap-3">
-                  <span className="text-sm font-mono font-bold text-slate-500 dark:text-slate-400">
+                  <span className="text-sm font-mono font-bold text-slate-500 dark:text-zinc-400">
                     {stage.stageNumber}
                   </span>
                   <span className={`text-xs font-bold px-3 py-1 rounded-full border ${stage.badgeColor}`}>
                     {stage.status}
                   </span>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-navy-900 dark:text-white">
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-navy-900 dark:text-zinc-100">
                   {stage.stageName}
                 </h3>
               </div>
 
-              <div className="text-xs font-mono font-semibold text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-navy-800 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-navy-700 self-start sm:self-auto">
+              <div className="text-xs font-mono font-semibold text-slate-500 dark:text-zinc-400 bg-slate-50 dark:bg-zinc-800 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-zinc-700 self-start sm:self-auto">
                 {stage.timeframe}
               </div>
             </div>
 
             {/* Description & Headline */}
             <div className="space-y-2">
-              <h4 className="text-base font-bold text-brand-dark dark:text-brand-light">
+              <h4 className="text-base font-bold text-brand-dark dark:text-zinc-200">
                 {stage.headline}
               </h4>
-              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl">
+              <p className="text-sm text-slate-600 dark:text-zinc-300 leading-relaxed max-w-3xl">
                 {stage.description}
               </p>
             </div>
@@ -83,12 +83,12 @@ export default function RoadmapPage() {
                   className={`p-4 rounded-xl border space-y-1.5 ${
                     item.isKeyDifferentiator
                       ? "bg-emerald-50/40 dark:bg-emerald-950/30 border-emerald-200/90 dark:border-emerald-800/60"
-                      : "bg-slate-50/60 dark:bg-navy-850 border-slate-200 dark:border-navy-750"
+                      : "bg-slate-50/60 dark:bg-zinc-800 border-slate-200 dark:border-zinc-700"
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 font-bold text-sm text-navy-900 dark:text-white">
-                      <CheckCircle2 className={`w-4 h-4 shrink-0 ${item.isKeyDifferentiator ? "text-emerald-600 dark:text-emerald-400" : "text-slate-500 dark:text-slate-400"}`} />
+                    <div className="flex items-center gap-2 font-bold text-sm text-navy-900 dark:text-zinc-100">
+                      <CheckCircle2 className={`w-4 h-4 shrink-0 ${item.isKeyDifferentiator ? "text-emerald-600 dark:text-emerald-400" : "text-slate-500 dark:text-zinc-400"}`} />
                       <span>{item.title}</span>
                     </div>
                     {item.isKeyDifferentiator && (
@@ -97,7 +97,7 @@ export default function RoadmapPage() {
                       </span>
                     )}
                   </div>
-                  <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed pl-6">
+                  <p className="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed pl-6">
                     {item.description}
                   </p>
                 </div>

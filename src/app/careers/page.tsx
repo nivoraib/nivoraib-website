@@ -42,7 +42,7 @@ export default function CareersPage() {
       </section>
 
       {/* 2. How We Work / Values */}
-      <section className="bg-slate-50 dark:bg-navy-950/60 py-16 border-y border-slate-200/80 dark:border-navy-800/80">
+      <section className="bg-slate-50 dark:bg-zinc-950 py-16 border-y border-slate-200/80 dark:border-zinc-800">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-10">
           <SectionHeader
             badge="Our Culture"
@@ -56,15 +56,15 @@ export default function CareersPage() {
               return (
                 <div
                   key={idx}
-                  className="bg-white dark:bg-navy-900 rounded-2xl border border-slate-200 dark:border-navy-800 p-6 sm:p-8 space-y-4 shadow-sm hover:shadow-card transition-all"
+                  className="bg-white dark:bg-zinc-850 rounded-2xl border border-slate-200 dark:border-zinc-700 p-6 sm:p-8 space-y-4 shadow-sm hover:shadow-card transition-all"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-brand-light dark:bg-navy-800 text-brand-dark dark:text-brand-lavender flex items-center justify-center border border-brand-soft/50 dark:border-navy-700">
+                  <div className="w-12 h-12 rounded-xl bg-brand-light dark:bg-zinc-800 text-brand-dark dark:text-zinc-200 flex items-center justify-center border border-brand-soft/50 dark:border-zinc-700">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h3 className="text-lg font-bold text-navy-900 dark:text-white">
+                  <h3 className="text-lg font-bold text-navy-900 dark:text-zinc-100">
                     {val.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-zinc-400 leading-relaxed">
                     {val.desc}
                   </p>
                 </div>
@@ -76,16 +76,16 @@ export default function CareersPage() {
 
       {/* 3. Open Roles */}
       <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-8">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-200 dark:border-navy-800 pb-4">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-200 dark:border-zinc-800 pb-4">
           <div>
-            <h2 className="text-2xl font-extrabold text-navy-900 dark:text-white">
+            <h2 className="text-2xl font-extrabold text-navy-900 dark:text-zinc-100">
               Open Roles &amp; Opportunities
             </h2>
-            <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+            <p className="text-xs sm:text-sm text-slate-500 dark:text-zinc-400 mt-1">
               Roles across AI engineering, curriculum expertise, and product design.
             </p>
           </div>
-          <span className="text-xs font-mono text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-navy-900 px-3 py-1 rounded-full border border-slate-200 dark:border-navy-800">
+          <span className="text-xs font-mono text-slate-500 dark:text-zinc-400 bg-slate-100 dark:bg-zinc-850 px-3 py-1 rounded-full border border-slate-200 dark:border-zinc-700">
             {CAREER_ROLES.length} Openings
           </span>
         </div>
@@ -99,20 +99,20 @@ export default function CareersPage() {
 
       {/* 4. Open Application */}
       <section className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="bg-white dark:bg-navy-900/90 text-navy-900 dark:text-white rounded-2xl p-8 sm:p-10 text-center space-y-5 shadow-card dark:shadow-xl border border-slate-200/90 dark:border-navy-700/80">
-          <span className="text-xs font-mono font-bold uppercase tracking-widest text-brand-dark dark:text-brand-lavender">
+        <div className="bg-white dark:bg-zinc-850 text-navy-900 dark:text-zinc-100 rounded-2xl p-8 sm:p-10 text-center space-y-5 shadow-card dark:shadow-xl border border-slate-200/90 dark:border-zinc-700">
+          <span className="text-xs font-mono font-bold uppercase tracking-widest text-brand-dark dark:text-zinc-300">
             Open Applications
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 dark:text-white">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 dark:text-zinc-100">
             Don&rsquo;t See an Exact Match for Your Domain?
           </h2>
-          <p className="text-sm text-slate-600 dark:text-slate-300 max-w-xl mx-auto leading-relaxed">
+          <p className="text-sm text-slate-600 dark:text-zinc-300 max-w-xl mx-auto leading-relaxed">
             If you are an experienced IB Diploma teacher, examiner, or AI researcher passionate about elevating education through high-reliability tools, we would love to hear from you.
           </p>
           <div className="pt-2">
             <Link
               href="/contact?reason=careers"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-navy-900 hover:bg-navy-800 dark:bg-white dark:hover:bg-slate-100 text-white dark:text-navy-900 font-bold text-sm transition-all shadow-sm hover:shadow active:scale-[0.98] group"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-navy-900 hover:bg-navy-800 dark:bg-white dark:hover:bg-zinc-200 text-white dark:text-zinc-950 font-bold text-sm transition-all shadow-sm hover:shadow active:scale-[0.98] group"
             >
               <span>Get in Touch</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />

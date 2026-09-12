@@ -37,11 +37,11 @@ export default function TeamPage() {
 
         return (
           <section key={dept} className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-6">
-            <div className="flex items-center justify-between border-b border-slate-200 dark:border-navy-800 pb-3">
-              <h3 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-white">
+            <div className="flex items-center justify-between border-b border-slate-200 dark:border-zinc-800 pb-3">
+              <h3 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-zinc-100">
                 {dept}
               </h3>
-              <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
+              <span className="text-xs font-mono text-slate-500 dark:text-zinc-400">
                 {members.length} {members.length === 1 ? "Role" : "Roles"}
               </span>
             </div>

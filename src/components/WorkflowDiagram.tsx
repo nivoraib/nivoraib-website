@@ -81,31 +81,31 @@ export default function WorkflowDiagram() {
               onClick={() => setActiveStep(idx)}
               className={`cursor-pointer p-4 rounded-xl border text-left transition-all relative group ${
                 isSelected
-                  ? "bg-white dark:bg-navy-900 border-brand-indigo ring-2 ring-brand-indigo/20 shadow-md scale-[1.02]"
-                  : "bg-slate-50/70 dark:bg-navy-900/60 border-slate-200 dark:border-navy-800 hover:bg-white dark:hover:bg-navy-850 hover:border-slate-300 dark:hover:border-navy-700"
+                  ? "bg-white dark:bg-zinc-800 border-brand-indigo dark:border-zinc-400 ring-2 ring-brand-indigo/20 dark:ring-zinc-400/20 shadow-md scale-[1.02]"
+                  : "bg-slate-50/70 dark:bg-zinc-850 border-slate-200 dark:border-zinc-700 hover:bg-white dark:hover:bg-zinc-800 hover:border-slate-300 dark:hover:border-zinc-600"
               }`}
             >
               <div className="flex items-center justify-between mb-3">
-                <span className={`font-mono text-xs font-bold ${isSelected ? "text-brand-indigo dark:text-brand-lavender" : "text-slate-500 dark:text-slate-400"}`}>
+                <span className={`font-mono text-xs font-bold ${isSelected ? "text-brand-indigo dark:text-zinc-200" : "text-slate-500 dark:text-zinc-400"}`}>
                   Step {step.num}
                 </span>
-                <div className={`p-2 rounded-lg ${isSelected ? "bg-brand-indigo text-white" : "bg-white dark:bg-navy-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-navy-700"}`}>
+                <div className={`p-2 rounded-lg ${isSelected ? "bg-navy-900 dark:bg-white text-white dark:text-zinc-950" : "bg-white dark:bg-zinc-800 text-slate-600 dark:text-zinc-300 border border-slate-200 dark:border-zinc-700"}`}>
                   <Icon className="w-4 h-4" />
                 </div>
               </div>
 
-              <h3 className="font-extrabold text-sm text-navy-900 dark:text-white leading-snug">
+              <h3 className="font-extrabold text-sm text-navy-900 dark:text-zinc-100 leading-snug">
                 {step.title}
               </h3>
-              <p className="text-xs text-slate-600 dark:text-slate-300 mt-1 line-clamp-2">
+              <p className="text-xs text-slate-600 dark:text-zinc-300 mt-1 line-clamp-2">
                 {step.desc}
               </p>
 
-              <div className="mt-3 pt-2 border-t border-slate-100 dark:border-navy-800 flex items-center justify-between text-[11px]">
-                <span className="font-mono text-slate-500 dark:text-slate-400 truncate max-w-[140px]">
+              <div className="mt-3 pt-2 border-t border-slate-100 dark:border-zinc-800 flex items-center justify-between text-[11px]">
+                <span className="font-mono text-slate-500 dark:text-zinc-400 truncate max-w-[140px]">
                   {step.output}
                 </span>
-                <span className={`font-semibold ${isSelected ? "text-brand-indigo dark:text-brand-lavender" : "text-slate-400 group-hover:text-slate-600 dark:group-hover:text-slate-300"}`}>
+                <span className={`font-semibold ${isSelected ? "text-brand-indigo dark:text-zinc-200" : "text-slate-400 group-hover:text-slate-600 dark:group-hover:text-zinc-300"}`}>
                   {isSelected ? "Active" : "Inspect →"}
                 </span>
               </div>
@@ -115,31 +115,31 @@ export default function WorkflowDiagram() {
       </div>
 
       {/* Selected Step Detail Inspector */}
-      <div className="rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-800 p-6 sm:p-8 shadow-card flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div className="rounded-2xl bg-white dark:bg-zinc-850 border border-slate-200 dark:border-zinc-700 p-6 sm:p-8 shadow-card flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div className="space-y-2 max-w-2xl">
           <div className="flex items-center gap-2">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-brand-indigo dark:text-brand-lavender bg-brand-light dark:bg-brand-indigo/20 px-2.5 py-0.5 rounded-full border border-brand-soft/50 dark:border-brand-indigo/30">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-brand-dark dark:text-zinc-200 bg-brand-light dark:bg-zinc-800 px-2.5 py-0.5 rounded-full border border-brand-soft/50 dark:border-zinc-700">
               Phase {steps[activeStep].num} Deep Dive
             </span>
-            <span className="text-xs text-slate-500 dark:text-slate-400">• Click any step above to explore</span>
+            <span className="text-xs text-slate-500 dark:text-zinc-400">• Click any step above to explore</span>
           </div>
-          <h3 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-white">
+          <h3 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-zinc-100">
             {steps[activeStep].title}
           </h3>
-          <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          <p className="text-sm text-slate-600 dark:text-zinc-300 leading-relaxed">
             {steps[activeStep].desc}
           </p>
         </div>
 
-        <div className="shrink-0 p-4 rounded-xl bg-slate-50 dark:bg-navy-950/80 border border-slate-200 dark:border-navy-800 space-y-2 min-w-[240px]">
-          <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+        <div className="shrink-0 p-4 rounded-xl bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-750 space-y-2 min-w-[240px]">
+          <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-zinc-400">
             Step Artifact Contract:
           </div>
-          <div className="flex items-center gap-2 text-xs font-mono font-semibold text-navy-900 dark:text-white">
+          <div className="flex items-center gap-2 text-xs font-mono font-semibold text-navy-900 dark:text-zinc-100">
             <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
             <span>{steps[activeStep].output}</span>
           </div>
-          <div className="text-[11px] text-slate-500 dark:text-slate-400">
+          <div className="text-[11px] text-slate-500 dark:text-zinc-400">
             State validated &amp; persisted to task graph.
           </div>
         </div>

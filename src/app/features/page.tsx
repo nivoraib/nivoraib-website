@@ -38,22 +38,22 @@ export default function FeaturesPage() {
 
         return (
           <section key={cat.id} id={cat.id} className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-8 scroll-mt-24">
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-200 dark:border-navy-800 pb-4">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-200 dark:border-zinc-800 pb-4">
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
-                  <div className="p-2 rounded-lg bg-brand-light dark:bg-navy-800 text-brand-dark dark:text-brand-lavender border border-brand-soft/40 dark:border-navy-700">
+                  <div className="p-2 rounded-lg bg-brand-light dark:bg-zinc-800 text-brand-dark dark:text-zinc-200 border border-brand-soft/40 dark:border-zinc-700">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="text-2xl font-extrabold text-navy-900 dark:text-white">
+                  <h3 className="text-2xl font-extrabold text-navy-900 dark:text-zinc-100">
                     {cat.label}
                   </h3>
                 </div>
-                <p className="text-sm text-slate-500 dark:text-slate-400">
+                <p className="text-sm text-slate-500 dark:text-zinc-400">
                   {cat.desc}
                 </p>
               </div>
 
-              <span className="text-xs font-mono text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-navy-900 px-3 py-1 rounded-full border border-slate-200 dark:border-navy-800 self-start sm:self-auto">
+              <span className="text-xs font-mono text-slate-500 dark:text-zinc-400 bg-slate-100 dark:bg-zinc-850 px-3 py-1 rounded-full border border-slate-200 dark:border-zinc-700 self-start sm:self-auto">
                 {items.length} {items.length === 1 ? "Capability" : "Capabilities"}
               </span>
             </div>

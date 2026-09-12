@@ -37,21 +37,21 @@ export default function CTASection({
   };
 
   return (
-    <section className="relative py-16 sm:py-20 bg-slate-50 dark:bg-navy-950 text-navy-900 dark:text-white overflow-hidden border-t border-slate-200 dark:border-slate-800">
+    <section className="relative py-16 sm:py-20 bg-slate-50 dark:bg-zinc-950 text-navy-900 dark:text-zinc-100 overflow-hidden border-t border-slate-200 dark:border-zinc-800">
       {/* Background subtle radial glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-brand-indigo/5 dark:bg-brand-indigo/15 blur-[120px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-brand-indigo/5 dark:bg-zinc-800/10 blur-[120px] pointer-events-none rounded-full" />
 
       <div className="relative max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center space-y-6">
-        <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-brand-light/80 dark:bg-navy-900 border border-brand-soft/60 dark:border-brand-indigo/40 text-xs font-mono text-brand-dark dark:text-brand-lavender">
-          <Sparkles className="w-3.5 h-3.5 text-brand-indigo dark:text-brand-lavender" />
+        <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-brand-light/80 dark:bg-zinc-900 border border-brand-soft/60 dark:border-zinc-750 text-xs font-mono text-brand-dark dark:text-zinc-200">
+          <Sparkles className="w-3.5 h-3.5 text-brand-indigo dark:text-zinc-300" />
           <span>{badgeText}</span>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight max-w-3xl mx-auto leading-tight text-navy-900 dark:text-white">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight max-w-3xl mx-auto leading-tight text-navy-900 dark:text-zinc-100">
           {title}
         </h2>
 
-        <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+        <p className="text-slate-600 dark:text-zinc-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
           {subtitle}
         </p>
 
@@ -59,7 +59,7 @@ export default function CTASection({
           {primaryCtaHref && primaryCtaHref !== "/dashboard" ? (
             <Link
               href={primaryCtaHref}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-navy-900 hover:bg-navy-800 dark:bg-white dark:hover:bg-slate-100 text-white dark:text-navy-950 font-bold text-sm shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-150 group"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-navy-900 hover:bg-navy-800 dark:bg-white dark:hover:bg-slate-100 text-white dark:text-zinc-950 font-bold text-sm shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-150 group"
             >
               <span>{primaryCtaText}</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-150" />
@@ -67,7 +67,7 @@ export default function CTASection({
           ) : (
             <button
               onClick={handlePrimaryClick}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-navy-900 hover:bg-navy-800 dark:bg-white dark:hover:bg-slate-100 text-white dark:text-navy-950 font-bold text-sm shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-150 group cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-navy-900 hover:bg-navy-800 dark:bg-white dark:hover:bg-slate-100 text-white dark:text-zinc-950 font-bold text-sm shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-150 group cursor-pointer"
             >
               <span>{primaryCtaText}</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-150" />
@@ -76,13 +76,13 @@ export default function CTASection({
 
           <Link
             href={secondaryCtaHref}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-white hover:bg-slate-100 dark:bg-navy-850 dark:hover:bg-navy-800 text-slate-800 dark:text-white font-semibold text-sm border border-slate-300 dark:border-navy-700 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-150 shadow-2xs"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-white hover:bg-slate-100 dark:bg-zinc-850 dark:hover:bg-zinc-800 text-slate-800 dark:text-zinc-100 font-semibold text-sm border border-slate-300 dark:border-zinc-700 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-150 shadow-2xs"
           >
             <span>{secondaryCtaText}</span>
           </Link>
         </div>
 
-        <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-600 dark:text-slate-400 font-mono">
+        <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-600 dark:text-zinc-400 font-mono">
           <span className="flex items-center gap-1.5">
             <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
             Curriculum Grounded

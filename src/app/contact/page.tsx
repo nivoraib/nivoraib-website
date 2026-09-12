@@ -30,20 +30,20 @@ export default function ContactPage() {
 
           {/* Right: Contact Information & FAQ (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-slate-50 dark:bg-navy-900 rounded-2xl border border-slate-200 dark:border-navy-750 p-6 sm:p-8 space-y-6">
-              <h3 className="text-xl font-extrabold text-navy-900 dark:text-white">
+            <div className="bg-slate-50 dark:bg-zinc-850 rounded-2xl border border-slate-200 dark:border-zinc-700 p-6 sm:p-8 space-y-6">
+              <h3 className="text-xl font-extrabold text-navy-900 dark:text-zinc-100">
                 Inquiry Routing
               </h3>
 
-              <div className="space-y-4 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+              <div className="space-y-4 text-xs sm:text-sm text-slate-600 dark:text-zinc-300">
                 <div className="flex items-start gap-3">
-                  <School className="w-5 h-5 text-brand-indigo dark:text-brand-lavender shrink-0 mt-0.5" />
+                  <School className="w-5 h-5 text-brand-indigo dark:text-zinc-300 shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-navy-900 dark:text-white block">School &amp; Pilot Partnerships</strong>
-                    <span className="text-slate-500 dark:text-slate-400 text-xs">
+                    <strong className="text-navy-900 dark:text-zinc-100 block">School &amp; Pilot Partnerships</strong>
+                    <span className="text-slate-500 dark:text-zinc-400 text-xs">
                       Early access for IB DP coordinator teams and department heads.
                     </span>
-                    <div className="font-mono text-xs text-brand-indigo dark:text-brand-lavender mt-1">
+                    <div className="font-mono text-xs text-brand-indigo dark:text-zinc-300 mt-1">
                       partnerships@nivoraib.com
                     </div>
                   </div>
@@ -52,8 +52,8 @@ export default function ContactPage() {
                 <div className="flex items-start gap-3">
                   <Mail className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-navy-900 dark:text-white block">General &amp; Advisory Inquiries</strong>
-                    <span className="text-slate-500 dark:text-slate-400 text-xs">
+                    <strong className="text-navy-900 dark:text-zinc-100 block">General &amp; Advisory Inquiries</strong>
+                    <span className="text-slate-500 dark:text-zinc-400 text-xs">
                       Curriculum alignment, feedback, and academic questions.
                     </span>
                     <div className="font-mono text-xs text-emerald-700 dark:text-emerald-400 mt-1">
@@ -63,28 +63,28 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Clock className="w-5 h-5 text-purple-600 dark:text-purple-400 shrink-0 mt-0.5" />
+                  <Clock className="w-5 h-5 text-zinc-600 dark:text-zinc-400 shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-navy-900 dark:text-white block">Response Time</strong>
-                    <span className="text-slate-500 dark:text-slate-400 text-xs">
+                    <strong className="text-navy-900 dark:text-zinc-100 block">Response Time</strong>
+                    <span className="text-slate-500 dark:text-zinc-400 text-xs">
                       Inquiries are reviewed by the founding engineering and curriculum team within 24–48 hours.
                     </span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-slate-500 dark:text-slate-400 shrink-0 mt-0.5" />
+                  <MapPin className="w-5 h-5 text-slate-500 dark:text-zinc-400 shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-navy-900 dark:text-white block">Headquarters</strong>
-                    <span className="text-slate-500 dark:text-slate-400 text-xs">
+                    <strong className="text-navy-900 dark:text-zinc-100 block">Headquarters</strong>
+                    <span className="text-slate-500 dark:text-zinc-400 text-xs">
                       New Delhi, India &mdash; Est. 2026
                     </span>
                   </div>
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-white dark:bg-navy-850 border border-slate-200 dark:border-navy-750 text-xs text-slate-500 dark:text-slate-400 space-y-1.5">
-                <div className="font-semibold text-navy-900 dark:text-white flex items-center gap-1.5">
+              <div className="p-4 rounded-xl bg-white dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 text-xs text-slate-500 dark:text-zinc-400 space-y-1.5">
+                <div className="font-semibold text-navy-900 dark:text-zinc-100 flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                   Privacy &amp; Data Ethics Guarantee
                 </div>

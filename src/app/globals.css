@@ -16,8 +16,8 @@ html {
 }
 
 html.dark {
-  color: #f1f5f9;
-  background-color: #060e1a;
+  color: #f4f5f7;
+  background-color: #090a0c;
 }
 
 /* ==========================================================================
@@ -83,12 +83,12 @@ body {
 }
 
 .dark ::selection {
-  background-color: #3b427a;
+  background-color: #282a31;
   color: #ffffff;
 }
 
 .dark ::-moz-selection {
-  background-color: #3b427a;
+  background-color: #282a31;
   color: #ffffff;
 }
 
@@ -103,7 +103,7 @@ body {
 }
 
 .dark ::-webkit-scrollbar-track {
-  background: #0b192c;
+  background: #121316;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -112,7 +112,7 @@ body {
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: #1e3c66;
+  background: #32353d;
   border-radius: 4px;
 }
 
@@ -121,7 +121,7 @@ body {
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #2a528a;
+  background: #4e5462;
 }
 
 /* Focus styles for keyboard accessibility */

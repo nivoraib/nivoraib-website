@@ -24,30 +24,18 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setThemeState] = useState<Theme>("light");
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("nivoraib-theme") as Theme | null;
-    const initialTheme =
-      savedTheme === "dark" || savedTheme === "light"
-        ? savedTheme
-        : window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
-
-    if (initialTheme !== "light") {
-      setThemeState(initialTheme);
-      applyTheme(initialTheme);
-    }
-
-    // Listen for OS system theme changes if no explicit user preference is saved
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const handleChange = (e: MediaQueryListEvent) => {
-      if (!localStorage.getItem("nivoraib-theme")) {
-        const newTheme = e.matches ? "dark" : "light";
-        setThemeState(newTheme);
-        applyTheme(newTheme);
+    try {
+      const savedTheme = localStorage.getItem("nivoraib-theme") as Theme | null;
+      if (savedTheme === "dark") {
+        setThemeState("dark");
+        applyTheme("dark");
+      } else {
+        setThemeState("light");
+        applyTheme("light");
       }
-    };
-    mediaQuery.addEventListener("change", handleChange);
-    return () => mediaQuery.removeEventListener("change", handleChange);
+    } catch {
+      // ignore storage access errors
+    }
   }, []);
 
   const applyTheme = (t: Theme) => {

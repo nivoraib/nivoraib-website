@@ -28,16 +28,16 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-white dark:bg-navy-900 rounded-2xl border border-slate-200 dark:border-navy-750 p-6 sm:p-8 lg:p-10 shadow-card">
+    <div className="bg-white dark:bg-zinc-850 rounded-2xl border border-slate-200 dark:border-zinc-700 p-6 sm:p-8 lg:p-10 shadow-card">
       {status === "success" ? (
         <div className="text-center py-12 space-y-4">
           <div className="w-14 h-14 rounded-2xl bg-emerald-100 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 flex items-center justify-center mx-auto border border-emerald-200 dark:border-emerald-800/60">
             <CheckCircle2 className="w-8 h-8" />
           </div>
-          <h3 className="text-2xl font-extrabold text-navy-900 dark:text-white">
+          <h3 className="text-2xl font-extrabold text-navy-900 dark:text-zinc-100">
             Thank You for Reaching Out
           </h3>
-          <p className="text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto leading-relaxed">
+          <p className="text-sm text-slate-600 dark:text-zinc-300 max-w-md mx-auto leading-relaxed">
             Your inquiry has been received. A member of our team will contact you directly within 1–2 business days.
           </p>
           <button
@@ -45,7 +45,7 @@ export default function ContactForm() {
               setFormData({ name: "", email: "", organization: "", reason: "demo", message: "" });
               setStatus("idle");
             }}
-            className="mt-4 px-5 py-2.5 rounded-xl bg-navy-900 dark:bg-brand-indigo text-white text-xs font-bold hover:bg-navy-800 dark:hover:bg-brand-indigo/90 transition-colors"
+            className="mt-4 px-5 py-2.5 rounded-xl bg-navy-900 dark:bg-white dark:text-zinc-950 text-white text-xs font-bold hover:bg-navy-800 dark:hover:bg-zinc-200 transition-colors"
           >
             Send Another Message
           </button>
@@ -53,10 +53,10 @@ export default function ContactForm() {
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-1">
-            <h3 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-white">
+            <h3 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-zinc-100">
               Get in Touch with Nivoraib
             </h3>
-            <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+            <p className="text-xs sm:text-sm text-slate-500 dark:text-zinc-400">
               Inquire about pilot access, teacher workshops, technical architecture, or joining the team.
             </p>
           </div>
@@ -70,7 +70,7 @@ export default function ContactForm() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-1.5">
-              <label htmlFor="name" className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">
+              <label htmlFor="name" className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-zinc-300">
                 Full Name <span className="text-rose-500">*</span>
               </label>
               <input
@@ -80,12 +80,12 @@ export default function ContactForm() {
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 placeholder="e.g. Dr. Sarah Jenkins"
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-navy-700 focus:border-brand-indigo focus:ring-2 focus:ring-brand-indigo/20 text-sm text-navy-900 dark:text-white bg-white dark:bg-navy-850 placeholder:text-slate-400 dark:placeholder:text-slate-500 outline-none transition-all"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-zinc-700 focus:border-brand-indigo dark:focus:border-zinc-500 focus:ring-2 focus:ring-brand-indigo/20 text-sm text-navy-900 dark:text-zinc-100 bg-white dark:bg-zinc-800 placeholder:text-slate-400 dark:placeholder:text-zinc-500 outline-none transition-all"
               />
             </div>
 
             <div className="space-y-1.5">
-              <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">
+              <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-zinc-300">
                 Email Address <span className="text-rose-500">*</span>
               </label>
               <input
@@ -95,14 +95,14 @@ export default function ContactForm() {
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 placeholder="sarah.jenkins@isb.edu"
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-navy-700 focus:border-brand-indigo focus:ring-2 focus:ring-brand-indigo/20 text-sm text-navy-900 dark:text-white bg-white dark:bg-navy-850 placeholder:text-slate-400 dark:placeholder:text-slate-500 outline-none transition-all"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-zinc-700 focus:border-brand-indigo dark:focus:border-zinc-500 focus:ring-2 focus:ring-brand-indigo/20 text-sm text-navy-900 dark:text-zinc-100 bg-white dark:bg-zinc-800 placeholder:text-slate-400 dark:placeholder:text-zinc-500 outline-none transition-all"
               />
             </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-1.5">
-              <label htmlFor="org" className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">
+              <label htmlFor="org" className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-zinc-300">
                 School or Organization
               </label>
               <input
@@ -111,19 +111,19 @@ export default function ContactForm() {
                 value={formData.organization}
                 onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
                 placeholder="e.g. International School of Geneva"
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-navy-700 focus:border-brand-indigo focus:ring-2 focus:ring-brand-indigo/20 text-sm text-navy-900 dark:text-white bg-white dark:bg-navy-850 placeholder:text-slate-400 dark:placeholder:text-slate-500 outline-none transition-all"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-zinc-700 focus:border-brand-indigo dark:focus:border-zinc-500 focus:ring-2 focus:ring-brand-indigo/20 text-sm text-navy-900 dark:text-zinc-100 bg-white dark:bg-zinc-800 placeholder:text-slate-400 dark:placeholder:text-zinc-500 outline-none transition-all"
               />
             </div>
 
             <div className="space-y-1.5">
-              <label htmlFor="reason" className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">
+              <label htmlFor="reason" className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-zinc-300">
                 Reason for Contact <span className="text-rose-500">*</span>
               </label>
               <select
                 id="reason"
                 value={formData.reason}
                 onChange={(e) => setFormData({ ...formData, reason: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-navy-700 focus:border-brand-indigo focus:ring-2 focus:ring-brand-indigo/20 text-sm text-navy-900 dark:text-white bg-white dark:bg-navy-850 outline-none transition-all"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-zinc-700 focus:border-brand-indigo dark:focus:border-zinc-500 focus:ring-2 focus:ring-brand-indigo/20 text-sm text-navy-900 dark:text-zinc-100 bg-white dark:bg-zinc-800 outline-none transition-all"
               >
                 <option value="demo">Request Product Demo &amp; Pilot</option>
                 <option value="partnership">School / Institutional Partnership</option>
@@ -135,7 +135,7 @@ export default function ContactForm() {
           </div>
 
           <div className="space-y-1.5">
-            <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">
+            <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-zinc-300">
               Message <span className="text-rose-500">*</span>
             </label>
             <textarea
@@ -145,7 +145,7 @@ export default function ContactForm() {
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               placeholder="Tell us about your DP subjects, current teacher planning pain points, or inquiries..."
-              className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-navy-700 focus:border-brand-indigo focus:ring-2 focus:ring-brand-indigo/20 text-sm text-navy-900 dark:text-white bg-white dark:bg-navy-850 placeholder:text-slate-400 dark:placeholder:text-slate-500 outline-none transition-all resize-y"
+              className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-zinc-700 focus:border-brand-indigo dark:focus:border-zinc-500 focus:ring-2 focus:ring-brand-indigo/20 text-sm text-navy-900 dark:text-zinc-100 bg-white dark:bg-zinc-800 placeholder:text-slate-400 dark:placeholder:text-zinc-500 outline-none transition-all resize-y"
             />
           </div>
 
@@ -153,7 +153,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={status === "submitting"}
-              className="w-full py-3 px-6 rounded-xl bg-navy-900 hover:bg-navy-800 dark:bg-indigo-600 dark:hover:bg-indigo-500 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-70 cursor-pointer"
+              className="w-full py-3 px-6 rounded-xl bg-navy-900 hover:bg-navy-800 dark:bg-white dark:hover:bg-zinc-200 text-white dark:text-zinc-950 font-bold text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-70 cursor-pointer"
             >
               {status === "submitting" ? (
                 <>
@@ -169,7 +169,7 @@ export default function ContactForm() {
             </button>
           </div>
 
-          <div className="text-center text-[11px] text-slate-500 dark:text-slate-400">
+          <div className="text-center text-[11px] text-slate-500 dark:text-zinc-400">
             We respect your privacy. No marketing spam. Inquiries routed directly to founding team.
           </div>
         </form>

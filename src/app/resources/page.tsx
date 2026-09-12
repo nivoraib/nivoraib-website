@@ -50,8 +50,8 @@ export default function ResourcesPage() {
                 onClick={() => setActiveCategory(cat.id)}
                 className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all ${
                   activeCategory === cat.id
-                    ? "bg-navy-900 dark:bg-white text-white dark:text-navy-950 shadow-sm"
-                    : "bg-slate-100 dark:bg-navy-900 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-navy-800 border border-transparent dark:border-navy-800"
+                    ? "bg-navy-900 dark:bg-white text-white dark:text-zinc-950 shadow-sm"
+                    : "bg-slate-100 dark:bg-zinc-850 text-slate-700 dark:text-zinc-300 hover:bg-slate-200 dark:hover:bg-zinc-800 border border-transparent dark:border-zinc-700"
                 }`}
               >
                 {cat.label}
@@ -61,21 +61,21 @@ export default function ResourcesPage() {
 
           {/* Search Input */}
           <div className="relative w-full sm:w-72">
-            <Search className="w-4 h-4 text-slate-500 dark:text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-slate-500 dark:text-zinc-400 absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               placeholder="Search topics or tags..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-4 py-2 rounded-xl border border-slate-300 dark:border-navy-700 text-xs text-navy-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 outline-none focus:border-brand-indigo focus:ring-2 focus:ring-brand-indigo/20 transition-all bg-white dark:bg-navy-900"
+              className="w-full pl-9 pr-4 py-2 rounded-xl border border-slate-300 dark:border-zinc-700 text-xs text-navy-900 dark:text-zinc-100 placeholder:text-slate-500 dark:placeholder:text-zinc-400 outline-none focus:border-brand-indigo focus:ring-2 focus:ring-brand-indigo/20 transition-all bg-white dark:bg-zinc-850"
             />
           </div>
         </div>
 
         {/* Resources Bento Grid */}
         {filteredResources.length === 0 ? (
-          <div className="text-center py-16 bg-slate-50 dark:bg-navy-900/60 rounded-2xl border border-slate-200 dark:border-navy-800">
-            <p className="text-sm text-slate-500 dark:text-slate-400">
+          <div className="text-center py-16 bg-slate-50 dark:bg-zinc-850/60 rounded-2xl border border-slate-200 dark:border-zinc-800">
+            <p className="text-sm text-slate-500 dark:text-zinc-400">
               No articles or briefs found matching your filter.
             </p>
           </div>
@@ -117,26 +117,26 @@ export default function ResourcesPage() {
 
       {/* 3. Featured Article Deep Dive: Research to Product Alignment */}
       <section className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="bg-white dark:bg-navy-900/90 text-navy-900 dark:text-white rounded-2xl p-8 sm:p-10 space-y-6 shadow-card dark:shadow-xl border border-slate-200/90 dark:border-navy-700/80">
-          <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-brand-dark dark:text-brand-lavender">
+        <div className="bg-white dark:bg-zinc-850 text-navy-900 dark:text-zinc-100 rounded-2xl p-8 sm:p-10 space-y-6 shadow-card dark:shadow-xl border border-slate-200/90 dark:border-zinc-700">
+          <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-brand-dark dark:text-zinc-300">
             <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
             Executive Architecture Brief
           </div>
 
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-navy-900 dark:text-white">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-navy-900 dark:text-zinc-100">
             The Core Hypothesis: Harness Engineering Over Foundation Model Hype
           </h3>
 
-          <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          <p className="text-sm text-slate-600 dark:text-zinc-300 leading-relaxed">
             Recent empirical literature shows that changing the execution harness alone—introducing decoupled state managers, scoped context prompts, and independent read-only auditing—improved task completion significantly on identical underlying model weights.
           </p>
 
-          <div className="p-4 rounded-xl bg-slate-50 dark:bg-navy-950/80 border border-slate-200 dark:border-navy-800 font-mono text-xs text-emerald-800 dark:text-emerald-300 space-y-1">
-            <div className="text-slate-500 dark:text-slate-400 text-[11px]">// Proven Systems Engineering Principle</div>
+          <div className="p-4 rounded-xl bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-750 font-mono text-xs text-emerald-800 dark:text-emerald-300 space-y-1">
+            <div className="text-slate-500 dark:text-zinc-400 text-[11px]">// Proven Systems Engineering Principle</div>
             <div>Reliable Agent Behavior is a Systems-Level Property, Not Just a Prompt.</div>
           </div>
 
-          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-zinc-400">
             For NivoraIB, investing in deterministic validation, persistent state, and teacher-centric review is how we make generative AI clinically useful in high-stakes IB classrooms.
           </p>
         </div>

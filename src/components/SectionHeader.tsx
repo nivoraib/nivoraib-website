@@ -37,8 +37,8 @@ export default function SectionHeader({
             className={cn(
               "text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border inline-flex items-center gap-1.5",
               isDark
-                ? "bg-brand-indigo/20 text-brand-lavender border-brand-indigo/40"
-                : "bg-brand-light dark:bg-brand-indigo/20 text-brand-dark dark:text-brand-lavender border-brand-soft/50 dark:border-brand-indigo/30"
+                ? "bg-zinc-800 text-zinc-200 border-zinc-700"
+                : "bg-brand-light dark:bg-zinc-800 text-brand-dark dark:text-zinc-200 border-brand-soft/50 dark:border-zinc-700"
             )}
           >
             {badgeIcon}
@@ -50,7 +50,7 @@ export default function SectionHeader({
       <h2
         className={cn(
           "text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15]",
-          isDark ? "text-white" : "text-navy-900 dark:text-white"
+          isDark ? "text-zinc-100" : "text-navy-900 dark:text-zinc-100"
         )}
       >
         {title}
@@ -60,7 +60,7 @@ export default function SectionHeader({
         <p
           className={cn(
             "text-base sm:text-lg leading-relaxed",
-            isDark ? "text-slate-300" : "text-slate-600 dark:text-slate-300"
+            isDark ? "text-zinc-300" : "text-slate-600 dark:text-zinc-300"
           )}
         >
           {subtitle}
