@@ -6,6 +6,8 @@ import FeatureCard from "@/components/FeatureCard";
 import CTASection from "@/components/CTASection";
 import { Layers, FileCheck2, GraduationCap, FolderSearch, ShieldCheck } from "lucide-react";
 
+import AgentGrid from "@/components/AgentGrid";
+
 export const metadata = {
   title: "Features — Academic Workflows for IB DP Teachers",
   description: "Explore the complete feature suite of Nivoraib: Unit Planner, Lesson Planner, Assessment Generator, IA Assistant, TOK Guide, and Deterministic Validation.",
@@ -75,7 +77,17 @@ export default function FeaturesPage() {
         );
       })}
 
-      {/* 3. CTA */}
+      {/* 3. Specialized AI Agents Section */}
+      <section id="agents" className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-10 scroll-mt-24">
+        <SectionHeader
+          badge="Specialized Architecture"
+          title="10 Specialized AI Agents Over Shared Infrastructure"
+          subtitle="From 4-week inquiry units to criterion-referenced IA guidance, each agent is engineered with role-specific prompt harnesses and validation contracts."
+        />
+        <AgentGrid />
+      </section>
+
+      {/* 4. CTA */}
       <CTASection
         badgeText="Product Capabilities"
         title="Experience the NivoraIB Academic Workflows"
