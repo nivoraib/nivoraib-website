@@ -1,6 +1,6 @@
 import React from "react";
 import SectionHeader from "@/components/SectionHeader";
-import ContactForm from "@/components/ContactForm";
+
 import { Mail, MessageSquare, School, ShieldCheck, Clock, MapPin } from "lucide-react";
 
 export const metadata = {
@@ -23,10 +23,21 @@ export default function ContactPage() {
       {/* 2. Contact Grid: Left Form, Right Contact Info */}
       <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          {/* Left: Contact Form (7 cols) */}
-          <div className="lg:col-span-7">
-            <ContactForm />
-          </div>
+            {/* Left: Email Contacts (7 cols) */}
+            <div className="lg:col-span-7 space-y-6">
+              <div className="bg-white dark:bg-zinc-850 rounded-2xl border border-slate-200 dark:border-zinc-700 p-6 sm:p-8 text-center">
+                <h3 className="text-xl font-extrabold text-navy-900 dark:text-zinc-100 mb-2">General Contact</h3>
+                <a href="mailto:contact@nivoraib.com" className="text-brand-indigo dark:text-zinc-300 hover:underline">contact@nivoraib.com</a>
+              </div>
+              <div className="bg-white dark:bg-zinc-850 rounded-2xl border border-slate-200 dark:border-zinc-700 p-6 sm:p-8 text-center">
+                <h3 className="text-xl font-extrabold text-navy-900 dark:text-zinc-100 mb-2">Information / General Inquiries</h3>
+                <a href="mailto:info@nivoraib.com" className="text-brand-indigo dark:text-zinc-300 hover:underline">info@nivoraib.com</a>
+              </div>
+              <div className="bg-white dark:bg-zinc-850 rounded-2xl border border-slate-200 dark:border-zinc-700 p-6 sm:p-8 text-center">
+                <h3 className="text-xl font-extrabold text-navy-900 dark:text-zinc-100 mb-2">Partnerships</h3>
+                <a href="mailto:partnerships@nivoraib.com" className="text-brand-indigo dark:text-zinc-300 hover:underline">partnerships@nivoraib.com</a>
+              </div>
+            </div>
 
           {/* Right: Contact Information & FAQ (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
