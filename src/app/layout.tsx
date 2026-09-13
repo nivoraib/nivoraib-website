@@ -42,11 +42,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "NivoraIB" }],
   creator: "NivoraIB",
-  metadataBase: new URL("https://nivoraib.com"),
+  metadataBase: new URL("https://www.nivoraib.com"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://nivoraib.com",
+    url: "https://www.nivoraib.com",
     title: "Nivoraib — AI Workspace for IB Teachers",
     description:
       "Plan, create, assess, and teach from one curriculum-grounded workspace built around how IB teachers actually work.",
@@ -73,6 +73,14 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationLD = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  url: "https://www.nivoraib.com",
+  logo: "https://www.nivoraib.com/logo/1788871377642.jpg",
+  name: "NivoraIB",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -94,6 +102,10 @@ export default function RootLayout({
               } catch (_) {}
             `,
           }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLD) }}
         />
       </head>
       <body className="flex flex-col min-h-full bg-[#EBF6F7] dark:bg-zinc-950 text-navy-900 dark:text-zinc-100 selection:bg-brand-soft/40 selection:text-navy-950 font-sans">

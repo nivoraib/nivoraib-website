@@ -1,13 +1,13 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://nivoraib.com";
+  const baseUrl = "https://www.nivoraib.com";
   const routes = [
     "",
     "/platform",
     "/features",
     "/how-it-works",
-    "/dashboard",
+    // "/dashboard", // excluded per SEO requirement
     "/about",
     "/team",
     "/careers",

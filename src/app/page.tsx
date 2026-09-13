@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { Metadata } from "next";
 import { 
   Sparkles, ShieldCheck, CheckCircle2, ArrowRight, Layers, 
   FileCheck2, GraduationCap, Clock, Brain, UserCheck, Search, Share2 
@@ -8,6 +9,10 @@ import SectionHeader from "@/components/SectionHeader";
 import WorkspaceConceptHero from "@/components/WorkspaceConceptHero";
 import HeroCTAs from "@/components/HeroCTAs";
 import CTASection from "@/components/CTASection";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://www.nivoraib.com/" },
+};
 
 export default function HomePage() {
   const coreValues = [

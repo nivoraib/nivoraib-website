@@ -8,6 +8,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Team — NivoraIB",
   description: "Meet the founding team behind NivoraIB — the AI-powered workspace built for IB educators. Founded in New Delhi, 2026.",
+  alternates: { canonical: "https://www.nivoraib.com/team" },
 };
 
 export default function TeamPage() {
@@ -23,11 +24,19 @@ export default function TeamPage() {
     <div className="flex flex-col space-y-20 sm:space-y-24 py-12 sm:py-16">
       {/* 1. Header */}
       <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <SectionHeader
-          badge="Our Team"
-          title="Founded in New Delhi. Built for IB Teachers Worldwide."
-          subtitle="NivoraIB was founded in 2026 by a team combining multi-agent AI engineering, IB curriculum expertise, and teacher-centered product design."
-        />
+        <div className="max-w-3xl mx-auto text-center space-y-4">
+          <div className="inline-flex items-center gap-1.5 justify-center">
+            <span className="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border bg-brand-light dark:bg-zinc-800 text-brand-dark dark:text-zinc-200 border-brand-soft/50 dark:border-zinc-700 inline-flex items-center gap-1.5">
+              Our Team
+            </span>
+          </div>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] text-navy-900 dark:text-zinc-100">
+            Founded in New Delhi. Built for IB Teachers Worldwide.
+          </h1>
+          <p className="text-base sm:text-lg leading-relaxed text-slate-600 dark:text-zinc-300">
+            NivoraIB was founded in 2026 by a team combining multi-agent AI engineering, IB curriculum expertise, and teacher-centered product design.
+          </p>
+        </div>
       </section>
 
       {/* 2. Team Cards by Functional Department — Bento Balanced */}

@@ -7,6 +7,7 @@ import CTASection from "@/components/CTASection";
 export const metadata = {
   title: "How It Works — The 8-Step Teacher Workflow",
   description: "Learn how Nivoraib moves from natural teacher requests through intent parsing, context retrieval, specialized agent generation, deterministic auditing, and teacher review.",
+  alternates: { canonical: "https://www.nivoraib.com/how-it-works" },
 };
 
 export default function HowItWorksPage() {
@@ -14,10 +15,14 @@ export default function HowItWorksPage() {
     <div className="flex flex-col space-y-20 sm:space-y-24 py-12 sm:py-16">
       {/* 1. Header (Clean Heading without "Product Execution Flow" badge) */}
       <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <SectionHeader
-          title="From Teacher Intent to Verified Classroom Artifact"
-          subtitle="Explore the complete 8-step lifecycle of how Nivoraib grounds, orchestrates, validates, and preserves teacher-driven instructional content."
-        />
+        <div className="max-w-3xl mx-auto text-center space-y-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] text-navy-900 dark:text-zinc-100">
+            From Teacher Intent to Verified Classroom Artifact
+          </h1>
+          <p className="text-base sm:text-lg leading-relaxed text-slate-600 dark:text-zinc-300">
+            Explore the complete 8-step lifecycle of how Nivoraib grounds, orchestrates, validates, and preserves teacher-driven instructional content.
+          </p>
+        </div>
       </section>
 
       {/* 2. Interactive 8-Step Product Loop */}

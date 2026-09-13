@@ -7,6 +7,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Careers — Open to Talent at NivoraIB",
   description: "Explore opportunities to build with NivoraIB across Full Stack, AI, and UI/UX. Connect with our founding team.",
+  alternates: { canonical: "https://www.nivoraib.com/careers" },
 };
 
 export default function CareersPage() {
@@ -53,11 +54,19 @@ export default function CareersPage() {
     <div className="flex flex-col space-y-20 sm:space-y-24 py-12 sm:py-16">
       {/* 1. Header */}
       <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <SectionHeader
-          badge="Careers &amp; Talent"
-          title="Build the Academic AI Workspace That Teachers Actually Trust"
-          subtitle="We are assembling a team of multi-agent systems engineers, curriculum specialists, and experienced IB educators to build the most reliable AI workspace for IB Diploma teachers."
-        />
+        <div className="max-w-3xl mx-auto text-center space-y-4">
+          <div className="inline-flex items-center gap-1.5 justify-center">
+            <span className="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border bg-brand-light dark:bg-zinc-800 text-brand-dark dark:text-zinc-200 border-brand-soft/50 dark:border-zinc-700 inline-flex items-center gap-1.5">
+              Careers &amp; Talent
+            </span>
+          </div>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] text-navy-900 dark:text-zinc-100">
+            Build the Academic AI Workspace That Teachers Actually Trust
+          </h1>
+          <p className="text-base sm:text-lg leading-relaxed text-slate-600 dark:text-zinc-300">
+            We are assembling a team of multi-agent systems engineers, curriculum specialists, and experienced IB educators to build the most reliable AI workspace for IB Diploma teachers.
+          </p>
+        </div>
       </section>
 
       {/* 2. How We Work / Values */}

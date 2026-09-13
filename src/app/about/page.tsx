@@ -5,8 +5,9 @@ import { ShieldCheck, Heart, Sparkles, BookOpen, Compass, Target, ArrowRight, Ma
 import Link from "next/link";
 
 export const metadata = {
-  title: "About NivoraIB — AI Workspace for IB Teachers",
+  title: "About NivoraIB — Our Mission and Philosophy",
   description: "NivoraIB is an AI-powered workspace that helps IB educators plan, teach, assess, and manage their teaching workflows in one place. Founded in New Delhi, 2026.",
+  alternates: { canonical: "https://www.nivoraib.com/about" },
 };
 
 export default function AboutPage() {
@@ -14,11 +15,20 @@ export default function AboutPage() {
     <div className="flex flex-col space-y-20 sm:space-y-24 py-12 sm:py-16">
       {/* 1. Header */}
       <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-8">
-        <SectionHeader
-          badge="Our Mission &amp; Philosophy"
-          title="Teachers Shouldn’t Have to Rebuild Context Every Time They Ask AI for Help"
-          subtitle="NivoraIB is an AI-powered workspace that helps IB educators plan, teach, assess, and manage their teaching workflows in one place."
-        />
+        <div className="max-w-3xl mx-auto text-center space-y-4">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-1.5 justify-center">
+            <span className="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border bg-brand-light dark:bg-zinc-800 text-brand-dark dark:text-zinc-200 border-brand-soft/50 dark:border-zinc-700 inline-flex items-center gap-1.5">
+              Our Mission &amp; Philosophy
+            </span>
+          </div>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] text-navy-900 dark:text-zinc-100">
+            Teachers Shouldn&apos;t Have to Rebuild Context Every Time They Ask AI for Help
+          </h1>
+          <p className="text-base sm:text-lg leading-relaxed text-slate-600 dark:text-zinc-300">
+            NivoraIB is an AI-powered workspace that helps IB educators plan, teach, assess, and manage their teaching workflows in one place.
+          </p>
+        </div>
 
         {/* Company Identity Strip */}
         <div className="max-w-3xl mx-auto grid grid-cols-3 gap-4">

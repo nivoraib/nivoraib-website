@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://nivoraib.com/sitemap.xml",
+    sitemap: "https://www.nivoraib.com/sitemap.xml",
   };
 }
