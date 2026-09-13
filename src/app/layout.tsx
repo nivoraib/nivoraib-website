@@ -96,7 +96,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="flex flex-col min-h-full bg-white dark:bg-zinc-950 text-navy-900 dark:text-zinc-100 selection:bg-brand-soft/40 selection:text-navy-950 font-sans">
+      <body className="flex flex-col min-h-full bg-[#EBF6F7] dark:bg-zinc-950 text-navy-900 dark:text-zinc-100 selection:bg-brand-soft/40 selection:text-navy-950 font-sans">
         <ThemeProvider>
           <ComingSoonProvider>
             <Navbar />

@@ -42,8 +42,8 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-40 py-3.5 transition-colors duration-200 ease-out border-b ${
         scrolled
-          ? "bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md shadow-subtle border-slate-200/80 dark:border-zinc-800/90"
-          : "bg-white/90 dark:bg-zinc-950/90 backdrop-blur-sm border-slate-100 dark:border-zinc-900/90"
+          ? "bg-[#EBF6F7]/95 dark:bg-zinc-950/95 backdrop-blur-md shadow-subtle border-slate-200/80 dark:border-zinc-800/90"
+          : "bg-[#EBF6F7]/90 dark:bg-zinc-950/90 backdrop-blur-sm border-slate-200/60 dark:border-zinc-900/90"
       }`}
     >
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 xl:px-10">
@@ -255,7 +255,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {isOpen && (
-        <div className="min-[1240px]:hidden fixed inset-x-0 top-[73px] bg-white dark:bg-zinc-950 border-b border-slate-200 dark:border-zinc-800 shadow-2xl max-h-[calc(100vh-73px)] overflow-y-auto animate-in fade-in duration-150">
+        <div className="min-[1240px]:hidden fixed inset-x-0 top-[73px] bg-[#EBF6F7] dark:bg-zinc-950 border-b border-slate-200 dark:border-zinc-800 shadow-2xl max-h-[calc(100vh-73px)] overflow-y-auto animate-in fade-in duration-150">
           <div className="px-6 py-6 space-y-4">
             <div className="space-y-1">
               {MAIN_NAV.map((item) => {

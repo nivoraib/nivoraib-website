@@ -16,7 +16,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col space-y-20 sm:space-y-28 pb-16">
       {/* 1. HERO SECTION (Turing Inspired Editorial Hierarchy & Solid Typography) */}
-      <section className="relative pt-12 sm:pt-16 lg:pt-20 overflow-hidden bg-white dark:bg-zinc-950">
+      <section className="relative pt-12 sm:pt-16 lg:pt-20 overflow-hidden bg-transparent dark:bg-zinc-950">
         <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-10">
           <div className="max-w-4xl mx-auto text-center space-y-5">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-light/80 dark:bg-zinc-800 border border-brand-soft/60 dark:border-zinc-700 shadow-2xs">

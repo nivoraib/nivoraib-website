@@ -38,7 +38,24 @@ const config: Config = {
           600: "#059669",
           700: "#047857",
         },
+        canvas: {
+          DEFAULT: "#EBF6F7",
+          secondary: "#DFECEE",
+          subtle: "#E6F1F3",
+        },
+        surface: {
+          DEFAULT: "#F8FBFB",
+          card: "#F8FBFB",
+          elevated: "#FFFFFF",
+        },
+        coolborder: {
+          DEFAULT: "#CDE0E2",
+          subtle: "#DFEDEF",
+        },
         slate: {
+          50: "#DFECEE",
+          100: "#D6E7E9",
+          200: "#CDE0E2",
           850: "#151e2e",
         },
         zinc: {

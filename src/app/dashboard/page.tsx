@@ -78,7 +78,7 @@ export default function DashboardPreviewPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 dark:bg-zinc-950 flex flex-col">
+    <div className="min-h-screen bg-[#EBF6F7] dark:bg-zinc-950 flex flex-col">
       {/* Workspace Banner Notice */}
       <div className="bg-navy-900 dark:bg-zinc-900 text-slate-300 px-4 py-2 text-xs flex flex-wrap items-center justify-between gap-2 border-b border-navy-800 dark:border-zinc-800">
         <div className="flex items-center gap-2">

@@ -6,13 +6,17 @@
   --color-primary-navy: #0b192c;
   --color-brand-lavender: #9fa8f8;
   --color-verified-green: #10b981;
+  --page-background: #EBF6F7;
+  --surface-card: #F8FBFB;
+  --surface-secondary: #DFECEE;
+  --border-subtle: #CDE0E2;
 }
 
 html {
   scroll-behavior: smooth;
   font-family: var(--font-sans), 'Sora', sans-serif;
   color: #0b192c;
-  background-color: #ffffff;
+  background-color: #EBF6F7;
 }
 
 html.dark {
@@ -99,7 +103,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f8fafc;
+  background: #EBF6F7;
 }
 
 .dark ::-webkit-scrollbar-track {
@@ -107,7 +111,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #CDE0E2;
   border-radius: 4px;
 }
 
