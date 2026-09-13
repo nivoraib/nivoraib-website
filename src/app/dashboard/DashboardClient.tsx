@@ -101,7 +101,7 @@ export default function DashboardClient() {
           <div className="space-y-4">
             <div className="flex items-center gap-2.5 px-2 pb-3 border-b border-slate-100 dark:border-zinc-800">
               <div className="relative w-8 h-8 rounded-full overflow-hidden border border-navy-900/10 dark:border-zinc-700 bg-white dark:bg-white/95">
-                <Image src="/logo/logo_mark_clean.png" alt="Nivoraib" fill sizes="32px" className="object-cover" />
+                <Image src="/logo/logomain.png" alt="Nivoraib" fill sizes="32px" className="object-cover" />
               </div>
               <div className="flex flex-col">
                 <span className="font-extrabold text-sm text-navy-900 dark:text-zinc-100 leading-tight">Nivoraib Workspace</span>

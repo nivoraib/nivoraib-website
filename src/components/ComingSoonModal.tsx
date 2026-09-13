@@ -91,7 +91,7 @@ export function ComingSoonProvider({ children }: { children: React.ReactNode }) 
             <div className="mx-auto w-14 h-14 rounded-2xl bg-brand-light dark:bg-zinc-800 flex items-center justify-center border border-brand-soft/60 dark:border-zinc-700 shadow-2xs">
               <div className="relative w-9 h-9 bg-white dark:bg-white/95 rounded-lg p-0.5 border border-slate-200/60 dark:border-zinc-700">
                 <Image
-                  src="/logo/1788871377642.jpg"
+                  src="/logo/logomain.png"
                   alt="Nivoraib"
                   width={36}
                   height={36}

@@ -14,7 +14,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative w-10 h-10 shrink-0 bg-white dark:bg-white/95 rounded-lg p-0.5 border border-slate-200/80 dark:border-zinc-700/80 shadow-2xs">
                 <Image
-                  src="/logo/1788871377642.jpg"
+                  src="/logo/logomain.png"
                   alt="Nivoraib Logo"
                   width={40}
                   height={40}

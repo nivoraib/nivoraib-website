@@ -55,10 +55,10 @@ export default function Navbar() {
               href="/"
               className="flex items-center gap-3 shrink-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-indigo rounded-xl p-1 -ml-1 transition-transform duration-150 active:scale-[0.98]"
             >
-              {/* EXACT OFFICIAL LOGO ASSET FROM Video/logo/1788871377642.jpg */}
+              {/* EXACT OFFICIAL LOGO ASSET FROM Video/logo/logomain.png */}
               <div className="relative w-9 h-9 sm:w-10 sm:h-10 shrink-0 flex items-center justify-center bg-white dark:bg-white/95 rounded-lg p-0.5 border border-slate-200/60 dark:border-zinc-700/80 shadow-2xs">
                 <Image
-                  src="/logo/1788871377642.jpg"
+                  src="/logo/logomain.png"
                   alt="Nivoraib Logo"
                   width={40}
                   height={40}

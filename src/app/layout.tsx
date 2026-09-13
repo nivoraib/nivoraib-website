@@ -53,9 +53,9 @@ export const metadata: Metadata = {
     siteName: "Nivoraib",
     images: [
       {
-        url: "/logo/1788871377642.jpg",
-        width: 200,
-        height: 200,
+        url: "/logo/logomain.png",
+        width: 206,
+        height: 206,
         alt: "Nivoraib - AI Workspace for IB Teachers",
       },
     ],
@@ -65,11 +65,11 @@ export const metadata: Metadata = {
     title: "Nivoraib — AI Workspace for IB Teachers",
     description:
       "Plan, create, assess, and teach from one curriculum-grounded workspace built around how IB teachers actually work.",
-    images: ["/logo/1788871377642.jpg"],
+    images: ["/logo/logomain.png"],
   },
   icons: {
-    icon: "/logo/1788871377642.jpg",
-    apple: "/logo/1788871377642.jpg",
+    icon: "/logo/logomain.png",
+    apple: "/logo/logomain.png",
   },
 };
 
@@ -77,7 +77,7 @@ const organizationLD = {
   "@context": "https://schema.org",
   "@type": "Organization",
   url: "https://www.nivoraib.com",
-  logo: "https://www.nivoraib.com/logo/1788871377642.jpg",
+  logo: "https://www.nivoraib.com/logo/logomain.png",
   name: "NivoraIB",
 };
 
