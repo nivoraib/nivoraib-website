@@ -75,12 +75,12 @@ export const TEAM_MEMBERS: TeamMember[] = [
   },
 
   {
-    id: "fullstack-tbd",
-    name: undefined,
-    roleTitle: "Full Stack — To Be Decided",
+    id: "priyanshu-kumar",
+    name: "Priyanshu Kumar",
+    roleTitle: "Full Stack",
     department: "AI & Systems Engineering",
-    isConfirmed: false,
-    linkedIn: undefined,
+    isConfirmed: true,
+    linkedIn: "https://www.linkedin.com/in/priyanshu-kumar0/",
     scope: "Frontend & Platform Engineering",
     responsibilities: [
       "Building and maintaining the teacher-facing NivoraIB workspace interface",
