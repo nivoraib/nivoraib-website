@@ -48,34 +48,38 @@ export default function ContactPage() {
       <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="bg-slate-50 dark:bg-zinc-850 rounded-2xl border border-slate-200 dark:border-zinc-700 p-6 space-y-4 text-sm">
           <h3 className="text-lg font-bold text-navy-900 dark:text-zinc-100">Inquiry Routing</h3>
-          <div className="flex items-start gap-3">
-            <School className="w-5 h-5 text-brand-indigo dark:text-zinc-300 shrink-0 mt-0.5" />
-            <div>
-              <strong className="block text-navy-900 dark:text-zinc-100">School & Pilot Partnerships</strong>
-              <div className="font-mono text-xs text-brand-indigo dark:text-zinc-300 mt-1">partnerships@nivoraib.com</div>
+            <div className="flex items-start gap-3">
+              <School className="w-5 h-5 text-brand-indigo dark:text-zinc-300 shrink-0 mt-0.5" />
+              <div>
+                <strong className="block text-navy-900 dark:text-zinc-100">School & Pilot Partnerships</strong>
+                <p className="text-slate-500 dark:text-zinc-400 text-xs">
+                  For schools, IB DP coordinator teams, department heads, and pilot discussions.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="flex items-start gap-3">
-            <Mail className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
-            <div>
-              <strong className="block text-navy-900 dark:text-zinc-100">General & Advisory Inquiries</strong>
-              <div className="font-mono text-xs text-emerald-700 dark:text-emerald-400 mt-1">info@nivoraib.com</div>
+            <div className="flex items-start gap-3">
+              <Mail className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+              <div>
+                <strong className="block text-navy-900 dark:text-zinc-100">General & Advisory Inquiries</strong>
+                <p className="text-slate-500 dark:text-zinc-400 text-xs">
+                  For curriculum alignment, product questions, feedback, and academic inquiries.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="flex items-start gap-3">
-            <Clock className="w-5 h-5 text-zinc-600 dark:text-zinc-400 shrink-0 mt-0.5" />
-            <div>
-              <strong className="block text-navy-900 dark:text-zinc-100">Response Time</strong>
-              <span className="text-slate-500 dark:text-zinc-400">Inquiries are reviewed by the founding engineering and curriculum team within 24–48 hours.</span>
+            <div className="flex items-start gap-3">
+              <Clock className="w-5 h-5 text-zinc-600 dark:text-zinc-400 shrink-0 mt-0.5" />
+              <div>
+                <strong className="block text-navy-900 dark:text-zinc-100">Response Time</strong>
+                <span className="text-slate-500 dark:text-zinc-400">Inquiries are reviewed by the founding engineering and curriculum team within 24–48 hours.</span>
+              </div>
             </div>
-          </div>
-          <div className="flex items-start gap-3">
-            <MapPin className="w-5 h-5 text-slate-500 dark:text-zinc-400 shrink-0 mt-0.5" />
-            <div>
-              <strong className="block text-navy-900 dark:text-zinc-100">Headquarters</strong>
-              <span className="text-slate-500 dark:text-zinc-400">New Delhi, India — Est. 2026</span>
+            <div className="flex items-start gap-3">
+              <MapPin className="w-5 h-5 text-slate-500 dark:text-zinc-400 shrink-0 mt-0.5" />
+              <div>
+                <strong className="block text-navy-900 dark:text-zinc-100">Headquarters</strong>
+                <span className="text-slate-500 dark:text-zinc-400">New Delhi, India — Est. 2026</span>
+              </div>
             </div>
-          </div>
         </div>
       </section>
 
