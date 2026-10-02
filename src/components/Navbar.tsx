@@ -9,6 +9,8 @@ import { MAIN_NAV } from "@/data/navigation";
 import { useComingSoon } from "@/components/ComingSoonModal";
 import { useTheme } from "@/components/ThemeProvider";
 
+const PLATFORM_URL = "https://nivoraib-platform.vercel.app/login";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [companyDropdown, setCompanyDropdown] = useState(false);
@@ -32,7 +34,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile nav on route change
   useEffect(() => {
     setIsOpen(false);
     setCompanyDropdown(false);
@@ -47,15 +48,13 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 xl:px-10">
-        {/* Single Horizontal Flex Row with Centered Alignment */}
         <div className="flex items-center justify-between h-12">
-          {/* BRAND: Official Brand Logo & Name with generous right margin */}
+          {/* BRAND */}
           <div className="flex items-center shrink-0 mr-8 min-[1240px]:mr-12 2xl:mr-14">
             <Link
               href="/"
               className="flex items-center gap-3 shrink-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-indigo rounded-xl p-1 -ml-1 transition-transform duration-150 active:scale-[0.98]"
             >
-              {/* EXACT OFFICIAL LOGO ASSET FROM Video/logo/logomain.png */}
               <div className="relative w-9 h-9 sm:w-10 sm:h-10 shrink-0 flex items-center justify-center bg-white dark:bg-white/95 rounded-lg p-0.5 border border-slate-200/60 dark:border-zinc-700/80 shadow-2xs">
                 <Image
                   src="/logo/logomain.png"
@@ -67,14 +66,13 @@ export default function Navbar() {
                   priority
                 />
               </div>
-              {/* Brand Name Only — No Subtitle */}
               <span className="font-extrabold text-xl sm:text-2xl tracking-tight text-navy-900 dark:text-zinc-100 group-hover:text-brand-indigo dark:group-hover:text-zinc-200 transition-colors duration-150 leading-none select-none whitespace-nowrap">
                 Nivoraib
               </span>
             </Link>
           </div>
 
-          {/* NAVIGATION: All items strictly on ONE line with whitespace: nowrap and line-height: 1 */}
+          {/* DESKTOP NAVIGATION */}
           <nav className="hidden min-[1240px]:flex items-center gap-1.5 2xl:gap-3 flex-1">
             {MAIN_NAV.map((item) => {
               if (item.children) {
@@ -98,10 +96,14 @@ export default function Navbar() {
                       onClick={() => setCompanyDropdown(!companyDropdown)}
                       aria-expanded={companyDropdown}
                     >
-                      <span className="whitespace-nowrap leading-none">{item.label}</span>
+                      <span className="whitespace-nowrap leading-none">
+                        {item.label}
+                      </span>
                       <ChevronDown
                         className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                          companyDropdown ? "rotate-180 text-brand-indigo dark:text-zinc-200" : "text-slate-500 dark:text-zinc-400"
+                          companyDropdown
+                            ? "rotate-180 text-brand-indigo dark:text-zinc-200"
+                            : "text-slate-500 dark:text-zinc-400"
                         }`}
                       />
                     </button>
@@ -121,7 +123,9 @@ export default function Navbar() {
                               }`}
                             >
                               <div className="flex items-center justify-between text-sm font-medium whitespace-nowrap">
-                                <span className="whitespace-nowrap leading-none">{sub.label}</span>
+                                <span className="whitespace-nowrap leading-none">
+                                  {sub.label}
+                                </span>
                                 {sub.badge && (
                                   <span className="text-[10px] font-semibold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 px-2 py-0.5 rounded-full whitespace-nowrap leading-none border border-emerald-200/50 dark:border-emerald-800/50">
                                     {sub.badge}
@@ -142,7 +146,6 @@ export default function Navbar() {
                 );
               }
 
-              // Special handling for Product Preview: clean normal nav item with NO badge, triggers Coming Soon modal
               if (item.label === "Product Preview") {
                 return (
                   <button
@@ -150,7 +153,9 @@ export default function Navbar() {
                     onClick={() => openComingSoon("Product Preview")}
                     className="inline-flex items-center px-3 py-2 text-sm font-semibold rounded-xl text-slate-700 dark:text-zinc-300 hover:text-navy-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-zinc-800/80 whitespace-nowrap leading-none transition-all duration-150 cursor-pointer"
                   >
-                    <span className="whitespace-nowrap leading-none">{item.label}</span>
+                    <span className="whitespace-nowrap leading-none">
+                      {item.label}
+                    </span>
                   </button>
                 );
               }
@@ -166,12 +171,13 @@ export default function Navbar() {
                       : "text-slate-700 dark:text-zinc-300 hover:text-navy-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-zinc-800/80"
                   }`}
                 >
-                  <span className="whitespace-nowrap leading-none">{item.label}</span>
+                  <span className="whitespace-nowrap leading-none">
+                    {item.label}
+                  </span>
                 </Link>
               );
             })}
 
-            {/* Talk to Us as the final navigation item in the navigation row */}
             <Link
               href="/contact"
               className={`inline-flex items-center px-3 py-2 text-sm font-semibold rounded-xl whitespace-nowrap leading-none transition-all duration-150 ${
@@ -184,76 +190,106 @@ export default function Navbar() {
             </Link>
           </nav>
 
-          {/* CTA & Theme Toggle */}
+          {/* DESKTOP CTA & THEME TOGGLE */}
           <div className="hidden min-[1240px]:flex items-center shrink-0 ml-6 min-[1240px]:ml-8 2xl:ml-10 gap-2.5">
-            {/* Theme Toggle Button with Fast 250ms Rotation/Scale Crossfade */}
             <button
               onClick={toggleTheme}
-              aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
-              title={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
+              aria-label={
+                theme === "dark"
+                  ? "Switch to light theme"
+                  : "Switch to dark theme"
+              }
+              title={
+                theme === "dark"
+                  ? "Switch to light theme"
+                  : "Switch to dark theme"
+              }
               className="theme-toggle-control relative w-10 h-10 flex items-center justify-center rounded-xl text-slate-600 dark:text-zinc-300 hover:text-navy-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-zinc-800/80 cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-zinc-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-indigo active:scale-95 transition-all group"
             >
               <Sun
                 className={`theme-toggle-icon w-4 h-4 text-amber-400 absolute ${
-                  theme === "dark" ? "rotate-0 scale-100 opacity-100" : "-rotate-90 scale-0 opacity-0"
+                  theme === "dark"
+                    ? "rotate-0 scale-100 opacity-100"
+                    : "-rotate-90 scale-0 opacity-0"
                 }`}
               />
               <Moon
                 className={`theme-toggle-icon w-4 h-4 text-slate-600 dark:text-zinc-300 group-hover:text-navy-900 dark:group-hover:text-white absolute ${
-                  theme === "dark" ? "rotate-90 scale-0 opacity-0" : "rotate-0 scale-100 opacity-100"
+                  theme === "dark"
+                    ? "rotate-90 scale-0 opacity-0"
+                    : "rotate-0 scale-100 opacity-100"
                 }`}
               />
             </button>
 
-            {/* Explore Platform CTA Button with glide arrow */}
-            <button
-              onClick={() => openComingSoon("Explore Platform")}
-              className="inline-flex items-center justify-center gap-2 bg-navy-900 dark:bg-white text-white dark:text-zinc-950 hover:bg-navy-800 dark:hover:bg-slate-100 text-sm font-bold px-5 py-2.5 rounded-xl shadow-sm hover:shadow hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] whitespace-nowrap leading-none transition-all duration-200 group cursor-pointer"
+            {/* EXPLORE PLATFORM LINK */}
+            <a
+              href={PLATFORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-navy-900 dark:bg-white text-white dark:text-zinc-950 hover:bg-navy-800 dark:hover:bg-slate-100 text-sm font-bold px-5 py-2.5 rounded-xl shadow-sm hover:shadow hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] whitespace-nowrap leading-none transition-all duration-200 group"
             >
-              <span className="whitespace-nowrap leading-none">Explore Platform</span>
+              <span className="whitespace-nowrap leading-none">
+                Explore Platform
+              </span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-200 shrink-0" />
-            </button>
+            </a>
           </div>
 
-          {/* Mobile Right Menu Button & Quick Controls */}
+          {/* MOBILE CONTROLS */}
           <div className="flex min-[1240px]:hidden items-center gap-2">
-            {/* Quick Mobile Theme Toggle with 250ms micro-interaction */}
             <button
               onClick={toggleTheme}
-              aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
+              aria-label={
+                theme === "dark"
+                  ? "Switch to light theme"
+                  : "Switch to dark theme"
+              }
               className="theme-toggle-control relative w-9 h-9 flex items-center justify-center rounded-xl text-slate-600 dark:text-zinc-300 hover:text-navy-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-zinc-800 active:scale-95 transition-all"
             >
               <Sun
                 className={`theme-toggle-icon w-4 h-4 text-amber-400 absolute ${
-                  theme === "dark" ? "rotate-0 scale-100 opacity-100" : "-rotate-90 scale-0 opacity-0"
+                  theme === "dark"
+                    ? "rotate-0 scale-100 opacity-100"
+                    : "-rotate-90 scale-0 opacity-0"
                 }`}
               />
               <Moon
                 className={`theme-toggle-icon w-4 h-4 text-slate-600 absolute ${
-                  theme === "dark" ? "rotate-90 scale-0 opacity-0" : "rotate-0 scale-100 opacity-100"
+                  theme === "dark"
+                    ? "rotate-90 scale-0 opacity-0"
+                    : "rotate-0 scale-100 opacity-100"
                 }`}
               />
             </button>
 
-            <button
-              onClick={() => openComingSoon("Explore Platform")}
+            {/* MOBILE PLATFORM LINK */}
+            <a
+              href={PLATFORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center bg-navy-900 dark:bg-white text-white dark:text-zinc-950 text-xs font-bold px-3 py-1.5 rounded-lg active:scale-95 transition-transform whitespace-nowrap leading-none shadow-2xs"
             >
               Explore
-            </button>
+            </a>
 
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-xl text-slate-700 dark:text-zinc-300 hover:text-navy-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-zinc-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-indigo active:scale-95 transition-all"
               aria-label="Toggle Navigation Menu"
+              aria-expanded={isOpen}
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* MOBILE DRAWER MENU */}
       {isOpen && (
         <div className="min-[1240px]:hidden fixed inset-x-0 top-[73px] bg-[#EBF6F7] dark:bg-zinc-950 border-b border-slate-200 dark:border-zinc-800 shadow-2xl max-h-[calc(100vh-73px)] overflow-y-auto animate-in fade-in duration-150">
           <div className="px-6 py-6 space-y-4">
@@ -323,12 +359,18 @@ export default function Navbar() {
               })}
             </div>
 
-            {/* Mobile Theme Toggle Row */}
+            {/* MOBILE THEME TOGGLE */}
             <div className="pt-3 border-t border-slate-200 dark:border-zinc-800 flex items-center justify-between px-3.5 py-2 rounded-xl bg-slate-50 dark:bg-zinc-900/60">
-              <span className="text-sm font-semibold text-slate-700 dark:text-zinc-300">Theme</span>
+              <span className="text-sm font-semibold text-slate-700 dark:text-zinc-300">
+                Theme
+              </span>
               <button
                 onClick={toggleTheme}
-                aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
+                aria-label={
+                  theme === "dark"
+                    ? "Switch to light theme"
+                    : "Switch to dark theme"
+                }
                 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white dark:bg-zinc-800 text-xs font-bold text-slate-800 dark:text-zinc-200 border border-slate-200 dark:border-zinc-700 shadow-2xs active:scale-95 transition-all"
               >
                 {theme === "dark" ? (
@@ -345,23 +387,27 @@ export default function Navbar() {
               </button>
             </div>
 
+            {/* MOBILE FOOTER ACTIONS */}
             <div className="pt-2 flex flex-col gap-3">
               <Link
                 href="/contact"
+                onClick={() => setIsOpen(false)}
                 className="w-full text-center py-3 px-4 rounded-xl border border-slate-300 dark:border-zinc-700 text-sm font-semibold text-slate-800 dark:text-zinc-200 hover:bg-slate-50 dark:hover:bg-zinc-900 active:scale-98 transition-all"
               >
                 Talk to Us
               </Link>
-              <button
-                onClick={() => {
-                  setIsOpen(false);
-                  openComingSoon("Explore Platform");
-                }}
+
+              {/* MOBILE DRAWER PLATFORM LINK */}
+              <a
+                href={PLATFORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
                 className="w-full text-center py-3 px-4 rounded-xl bg-navy-900 dark:bg-white text-white dark:text-zinc-950 text-sm font-bold hover:bg-navy-800 dark:hover:bg-slate-100 flex items-center justify-center gap-2 active:scale-98 transition-all"
               >
                 <span>Explore Platform</span>
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -369,3 +415,4 @@ export default function Navbar() {
     </header>
   );
 }
+
